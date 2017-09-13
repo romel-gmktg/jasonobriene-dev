@@ -48,8 +48,15 @@
           ?>
           <?php echo do_shortcode('[gmktg_social_links]'); ?>
         </nav>
-        <h1 id="<?php the_field( 'hero_text_id' ); ?>"><?php the_field( 'hero_text' ); ?></h1>
+
+      
+        
       </div><!-- .page-row -->
+      <div class="page-row" id="block-hero">
+        <div class="content-hero">
+            <h1 id="<?php the_field( 'hero_text_id' ); ?>"><?php the_field( 'hero_text' ); ?></h1>
+        </div>
+      </div>
 
     </header><!-- #masthead -->
 
