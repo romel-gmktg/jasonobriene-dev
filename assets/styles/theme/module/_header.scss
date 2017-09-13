@@ -1,0 +1,62 @@
+.browserupgrade {
+  background: #e0e0e0;
+  font-size: em(12px);
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+
+.site {
+  overflow: hidden;
+}
+
+.site-name {
+  display: inline-block;
+  float: left;
+  vertical-align: top;
+  padding: 10px 20px;
+  border: 3px solid #fff;
+  font-weight: 900;
+}
+
+
+.site-header {
+  padding: 40px 0 0;
+}
+
+
+
+
+.site-logo {
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+
+  img,
+  a {
+    display: block;
+  }
+
+  a:focus {
+    outline: thin dotted;
+    outline-offset: 5px;
+  }
+
+}
+
+#masthead {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: relative;
+}
+
+#about-header {
+  background-size: auto;
+  background-position: left top;
+  background-repeat: no-repeat;
+}

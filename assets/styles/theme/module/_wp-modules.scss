@@ -1,0 +1,79 @@
+.wp-caption {
+  margin-bottom: 24px;
+  max-width: 100%;
+
+  img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wp-caption-text {
+    margin: 12px 0;
+  }
+}
+
+
+
+
+.wp-caption-text {
+  text-align: center;
+}
+
+
+
+
+.comment-content a {
+  word-wrap: break-word;
+}
+
+
+
+
+.bypostauthor {
+  display: block;
+}
+
+
+
+
+.gallery {
+  margin-bottom: 24px;
+}
+
+
+
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+
+  @for $i from 2 through 9 {
+    .gallery-columns-#{$i} & {
+      width: percentage(1/$i);
+    }
+  }
+}
+
+
+
+
+.gallery-caption {
+  display: block;
+}
+
+
+
+
+.wp-smiley {
+  .page-content &,
+  .entry-content &,
+  .comment-content & {
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,260 @@
+$spacing: 24px;
+
+
+
+
+html {
+  box-sizing: border-box;
+}
+
+
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+
+
+body {
+  background: #fff;
+  color: #595959;
+  font-family: 'Avenir LT Std', sans-serif !important;
+  font-size: em(16px);
+  line-height: 1.5;
+  margin: 0;
+  letter-spacing: 1px;
+  font-weight: 500;
+	font-style: normal;
+}
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+}
+
+h1 {
+  font-size: 83.33px;
+  color: #fff;
+}
+
+h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 17px;
+  margin-bottom: 40px;
+  font-weight: 900;
+}
+
+h4 {
+  font-size: 12.5px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+p {
+  margin-bottom: $spacing;
+  margin-top: $spacing;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+}
+
+
+
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # See https://css-tricks.com/almanac/properties/q/quotes
+// # See https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling
+// ----------------------------------------------------------------------------
+blockquote,
+q {
+  margin: 0 0 $spacing;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+
+  &:before,
+  &:after {
+    font-family: Georgia, Times, Times New Roman, serif;
+    font-size: em($spacing);
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &:before {
+    content: open-quote;
+    margin-right: 6px;
+  }
+
+  &:after {
+    content: close-quote;
+    margin-left: 6px;
+  }
+
+  html[lang="fr"] & {
+    quotes: "\00ab" "\00bb";
+  }
+
+}
+
+
+
+
+blockquote {
+  padding-left: $spacing;
+  padding-right: $spacing;
+
+  p {
+    display: inline;
+  }
+
+}
+
+
+
+
+address {
+  margin: 0 0 $spacing;
+}
+
+
+
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: em(15px);
+  line-height: 1.5;
+  margin-bottom: $spacing;
+  max-width: 100%;
+  overflow: auto;
+  padding: $spacing;
+}
+
+
+
+
+code,
+kbd,
+tt,
+var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: em(15px);
+}
+
+
+
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+
+
+
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+
+
+
+hr {
+  background: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: $spacing;
+}
+
+
+
+
+ul,
+ol {
+  margin: 0 0 $spacing;
+  padding-left: 32px;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+
+
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 $spacing $spacing;
+}
+
+
+
+
+img {
+  height: auto;
+  max-width: 100%;
+
+  a & {
+    border: 0; // Removes the border on images inside anchor tags on IE 10 and below.
+  }
+
+}
+
+
+
+
+figure {
+  margin: $spacing 0;
+}
+
+
+
+
+table {
+  margin: 0 0 $spacing;
+  width: 100%;
+}
+
+
+
+
+embed,
+iframe,
+object {
+  max-width: 100%;
+}

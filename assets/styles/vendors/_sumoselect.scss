@@ -1,0 +1,529 @@
+$dropdown-border_color: #f5f5f5;
+$dropdown-color_option_hover: #ea596a;
+
+$field-bg_color: #fff;
+$field-color_border: #ccc;
+$field-color_border_hover: #ea596a;
+$field-error: #790000;
+$field-radius: 2px;
+
+
+
+
+.SumoSelect {
+  max-width: 350px;
+  width: 100%;
+
+  > .CaptionCont {
+    background: $field-bg_color;
+    border-radius: $field-radius;
+    border: 1px solid $field-color_border;
+    margin: 0;
+    min-height: 14px;
+    position: relative;
+
+    > span {
+      cursor: default;
+      display: block;
+      overflow: hidden;
+      padding-right: 51px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      &.placeholder {
+        color: #ccc;
+      }
+
+    } // End span
+
+    // Arrow Icon
+    > label {
+      bottom: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 33px;
+
+      > i {
+        border-color: #595959 transparent transparent;
+        border-style: solid;
+        border-width: 8px 6px 0;
+        bottom: 0;
+        display: block;
+        height: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 0;
+      }
+
+    } // End label
+
+  } // End .CaptionCont
+
+  &:focus > .CaptionCont,
+  &:hover > .CaptionCont,
+  &.open > .CaptionCont {
+    border-color: $field-color_border_hover;
+  }
+
+}
+
+
+
+
+.SelectBox {
+  padding: 12px 0 11px 17px;
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # SumoSelect Option Wrapper
+// ----------------------------------------------------------------------------
+.SumoSelect {
+  > .optWrapper {
+    background: $field-bg_color;
+    border-radius: $field-radius;
+    box-shadow: 1px 2px 6px rgba(#000, 0.1);
+    box-sizing: border-box;
+    display: none;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    z-index: 1000;
+
+    > .options {
+      border-radius: $field-radius;
+      max-height: 245px; // Set the height of pop up here (Only for desktop mode)
+      position: relative;
+    }
+
+  } // End .optWrapper
+
+  &.open > .optWrapper {
+    display: block;
+    margin-top: 5px;
+    top: 100%;
+  }
+
+  &.open > .optWrapper.up {
+    bottom: 100%;
+    margin-bottom: 5px;
+    margin-top: 0;
+    top: auto;
+  }
+
+  &.open > .optWrapper.up.isFloating {
+    bottom: 0;
+    margin-bottom: auto;
+    top: 0;
+  }
+
+} // End .SumoSelect
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Single Select Option
+// ----------------------------------------------------------------------------
+.SumoSelect > .optWrapper > .options {
+  li {
+    label {
+      cursor: pointer;
+      display: block;
+      font-size: 1em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &.group > label {
+      cursor: default;
+      font-weight: bold;
+      padding: 8px 6px;
+    }
+
+    ul li.opt {
+      padding-left: 22px;
+    }
+
+  } // End li
+
+  li.opt {
+    border-bottom: 1px solid $dropdown-border_color;
+    cursor: pointer;
+    min-height: 46px;
+    padding: 12px 18px;
+    position: relative;
+
+    &.selected {
+      color: $dropdown-color_option_hover;
+    }
+
+    &:hover,
+    &.sel {
+      background: $dropdown-color_option_hover;
+      border-bottom: 1px solid $dropdown-color_option_hover;
+      color: #fff;
+    }
+
+  } // End li.opt
+
+  > li.opt {
+    &:first-child {
+      border-radius: $field-radius $field-radius 0 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      border-radius: 0 0 $field-radius $field-radius;
+    }
+
+  } // End li.opt
+
+} // End .SumoSelect > .optWrapper > .options
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Multiple Select Tick Icon
+// ----------------------------------------------------------------------------
+.SumoSelect > .optWrapper.multiple > .options li.opt.selected span i,
+.SumoSelect .select-all.selected > span i,
+.SumoSelect .select-all.partial > span i {
+  background: $dropdown-color_option_hover;
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Multiple Select Option
+// ----------------------------------------------------------------------------
+.SumoSelect > .optWrapper.multiple > .options {
+  li.opt {
+    cursor: pointer;
+    padding-left: 35px;
+
+    ul li.opt {
+      padding-left: 50px;
+    }
+
+  }
+
+}
+
+
+
+
+.SumoSelect > .optWrapper.multiple > .options li.opt span,
+.SumoSelect .select-all > span {
+  bottom: 0;
+  display: block;
+  margin-left: -35px;
+  position: absolute;
+  top: 0;
+  width: 30px;
+
+  i {
+    background: #fff;
+    border-radius: $field-radius;
+    border: 1px solid #aeaeae;
+    bottom: 0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+    height: 14px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 14px;
+  }
+
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Multi Controls
+// ----------------------------------------------------------------------------
+.SumoSelect > .optWrapper > .MultiControls {
+  background: #fff;
+  border-radius: 0 0 3px 3px;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.13);
+}
+
+
+
+
+.SumoSelect > .optWrapper.multiple {
+  > .MultiControls > p {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-size: em(11px);
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+
+    &:hover {
+      background: #f1f1f1;
+    }
+
+    &.btnOk {
+      border-radius: 0 0 0 2px;
+      border-right: 1px solid #dbdbdb;
+    }
+
+    &.btnCancel {
+      border-radius: 0 0 2px 0;
+    }
+
+  } // End .MultiControls > p
+
+  &.isFloating > .MultiControls {
+    bottom: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+  }
+
+  &.okCancelInMulti > .MultiControls {
+    display: block;
+
+    > p {
+      padding: 6px;
+    }
+
+  }
+
+} // End .SumoSelect > .optWrapper.multiple
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Filtering/Search
+// ----------------------------------------------------------------------------
+.SumoSelect {
+  .no-match {
+    padding: 12px 17px 11px;
+  }
+
+  &.open .search-txt {
+    border-radius: $field-radius;
+    padding: 12px 17px 11px;
+  }
+
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Floating Single Select
+// ----------------------------------------------------------------------------
+.SumoSelect > .optWrapper.isFloating {
+  > .options {
+    max-height: 100%;
+
+    li.opt {
+      padding: 10px;
+    }
+
+  }
+
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Floating Multiple Select
+// ----------------------------------------------------------------------------
+.SumoSelect > .optWrapper.multiple.isFloating {
+  padding-bottom: 31px;
+
+  > .options li.opt {
+    padding-left: 35px;
+  }
+
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Select All Button
+// ----------------------------------------------------------------------------
+.SumoSelect .select-all {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  border-radius: 2px 2px 0 0;
+  font-size: em(11px);
+  padding: 10px 10px 10px 35px;
+
+  &.partial > span i {
+    background: #ccc;
+  }
+
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Optgroups
+// ----------------------------------------------------------------------------
+.SumoSelect > .optWrapper > .options li.optGroup {
+  padding-left: 5px;
+  text-decoration: underline;
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Do not edit below this line.
+// # The CSS rules below makes SumoSelect work like a select field.
+// ----------------------------------------------------------------------------
+.SumoSelect p { margin: 0; }
+
+.sumoStopScroll { overflow: hidden; }
+
+// Filtering/Search
+.SumoSelect .hidden,
+.SumoSelect .search-txt,
+.SumoSelect .no-match {
+  display: none;
+}
+.SumoSelect .search-txt { outline: none; }
+.SumoSelect .no-match { padding: 6px; }
+.SumoSelect.open .search-txt {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.SumoSelect.open > .search > span,
+.SumoSelect.open > .search > label {
+  visibility: hidden;
+}
+
+// This is applied on that hidden select. DO NOT USE display:none; or visiblity:hidden; and Do not override any of these properties.
+.SelectClass,
+.SumoUnder {
+  border: none;
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+.SelectClass { z-index: 1; }
+
+.SumoSelect > .optWrapper > .options  li.opt label,
+.SumoSelect > .CaptionCont,
+.SumoSelect .select-all > label {
+  user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+.SumoSelect {
+  display: inline-block;
+  outline: none;
+  position: relative;
+}
+
+.SumoSelect > .optWrapper ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+}
+
+.SumoSelect > .optWrapper > .options li.group.disabled > label { opacity: 0.5; }
+
+// Single Select Option
+.SumoSelect > .optWrapper > .options li span { display: none; }
+
+// Multiple Select Tick Icon
+.SumoSelect > .optWrapper.multiple > .options li.opt.selected span i,
+.SumoSelect .select-all.selected > span i,
+.SumoSelect .select-all.partial > span i {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAABMSURBVAiZfc0xDkAAFIPhd2Kr1WRjcAExuIgzGUTIZ/AkImjSofnbNBAfHvzAHjOKNzhiQ42IDFXCDivaaxAJd0xYshT3QqBxqnxeHvhunpu23xnmAAAAAElFTkSuQmCC');
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+// Floating
+.SumoSelect > .optWrapper.isFloating {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-height: 90%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 90%;
+}
+
+// Select All Button
+.SumoSelect .select-all {
+  cursor: pointer;
+  position: relative;
+}
+.SumoSelect .select-all > label,
+.SumoSelect .select-all > span i {
+  cursor: pointer;
+}
+
+// Disabled State
+.SumoSelect.disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.SumoSelect.disabled > .CaptionCont {
+  border-color: #ccc;
+  box-shadow: none;
+}
+.SumoSelect > .optWrapper > .options li.opt.disabled {
+  background-color: inherit;
+  pointer-events: none;
+}
+.SumoSelect > .optWrapper > .options li.opt.disabled * {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+}

@@ -1,0 +1,49 @@
+body.login {
+  background: #f1f1f1;
+}
+
+#login h1 a,
+.login h1 a {
+  -webkit-background-size: 168px;
+  background-size: 168px;
+  background-image: url('../images/login-logo.png');
+  height: 168px;
+  width: 168px;
+}
+
+.login #login_error,
+.login .message {
+  border-left-color: #ea596a;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit {
+  background: #ea596a;
+  border-color: #ea596a;
+  -webkit-box-shadow: 0 1px 0 #ea596a;
+  box-shadow: 0 1px 0 #ea596a;
+  text-shadow: 0 -1px 1px #ea596a, 1px 0 1px #ea596a, 0 1px 1px #ea596a, -1px 0 1px #ea596a;
+}
+
+body.login div#login form#loginform input:focus {
+  border-color: #ea596a;
+  -webkit-box-shadow: 0 0 2px rgba(234, 89, 106, .8);
+  box-shadow: 0 0 2px rgba(234, 89, 106, .8);
+}
+
+.login #backtoblog a,
+.login #nav a {
+  color: #555d66;
+}
+
+.login #backtoblog a:hover,
+.login #nav a:hover {
+  color: #ea596a;
+}
+
+.login #backtoblog a:focus,
+.login #nav a:focus,
+.login h1 a:focus {
+  -webkit-box-shadow: 0 0 0 1px #ea596a, 0 0 2px 1px rgba(234, 89, 106, .8);
+  box-shadow: 0 0 0 1px #ea596a, 0 0 2px 1px rgba(234, 89, 106, .8);
+  color: #ea596a;
+}

@@ -1,0 +1,60 @@
+@function parseInt( $n ) {
+  @return $n / ($n * 0 + 1);
+}
+
+$base_context: 16 !default;
+@function em( $values, $context: $base_context ) {
+  $em: ();
+
+  @each $value in $values {
+    @if ( $value == 0 or type-of( $value ) != 'number' ) {
+      $em: append( $em, $value );
+    } @else {
+      $unit: unit( $value );
+      $val: parseInt( $value );
+      $con: parseInt( $context );
+
+      @if ( $unit == 'px' ) {
+        $em: append( $em, ( $val/$con + em ) );
+      }
+
+      @if ( $unit == 'em' ) {
+        $em: append( $em, $value );
+      }
+    }
+  }
+
+  @return $em;
+}
+
+@function rem( $values ) {
+  $context: 16;
+  $rem: ();
+
+  @each $value in $values {
+    @if ( $value == 0 or type-of( $value ) != 'number' ) {
+      $rem: append( $rem, $value );
+    } @else {
+      $unit: unit( $value );
+      $val: parseInt( $value );
+
+      @if ( $unit == 'px' ) {
+        $rem: append( $rem, ( $val/$context + rem ) );
+      }
+
+      @if ( $unit == 'rem' ) {
+        $rem: append( $rem, $value );
+      }
+    }
+  }
+
+  @return $rem;
+}
+
+@function font-url( $url ) {
+  @return url('../fonts/#{$url}');
+}
+
+@function image-url( $url ) {
+  @return url('../images/#{$url}');
+}

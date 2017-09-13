@@ -1,0 +1,41 @@
+@media screen and ( min-width: em(768px) ) {
+  .content-area {
+    .left-sidebar &,
+    .right-sidebar & {
+      width: 100%;
+    }
+
+    .left-sidebar & {
+      float: right;
+      margin-left: -300px;
+      padding-left: 320px;
+    }
+
+    .right-sidebar & {
+      float: left;
+      margin-right: -300px;
+      padding-right: 320px;
+    }
+
+  }
+
+
+
+
+  .sidebar-widget-area {
+    .left-sidebar &,
+    .right-sidebar & {
+      width: 300px;
+    }
+
+    .left-sidebar & {
+      float: left;
+    }
+
+    .right-sidebar & {
+      float: right;
+    }
+
+  }
+
+}

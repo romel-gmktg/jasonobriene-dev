@@ -1,0 +1,1390 @@
+$field-border_color: #ccc;
+$field-border_color--hover: #ea596a;
+$field-error: #790000;
+$field-radius: 0px;
+$field-gap: 10px;
+$field-spacing: 24px;
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Buttons
+// ----------------------------------------------------------------------------
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background: #ea596a;
+  border-radius: $field-radius;
+  border: 1px solid #ea596a;
+  color: #fff;
+  padding: 30px;
+  min-width: 215px;
+  font-size: 12.5px;
+  font-family: 'Avenir-Bold', sans-serif !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-out;
+  vertical-align: middle;
+
+  &:focus,
+  &:hover {
+    border-color: darken(#ea596a, 10%);
+    background: darken(#ea596a, 10%);
+    outline: 0;
+  }
+
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Input Fields
+// ----------------------------------------------------------------------------
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+select,
+textarea {
+  background: #fff;
+  border-radius: $field-radius;
+  border: 1px solid $field-border_color;
+  padding: 25px 18px;
+  padding-left: 20px;
+
+  &:focus,
+  &:hover {
+    border-color: $field-border_color--hover;
+    color: #111;
+    outline: 0;
+  }
+
+}
+
+
+
+
+textarea {
+  line-height: 1.6;
+  resize: none;
+  width: 100%;
+}
+
+
+
+
+select {
+  appearance: none;
+  border: 1px solid $field-border_color;
+  max-width: 350px;
+  padding: 12px 18px 11px;
+  width: 100%;
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Gravity Forms: Base CSS
+// ----------------------------------------------------------------------------
+input,
+select,
+.SumoSelect {
+  &.small {
+    width: calc(33.3333% - #{$field-gap});
+  }
+
+  &.medium {
+    width: calc(50% - #{$field-gap});
+  }
+
+  &.large {
+    width: 100%;
+  }
+
+}
+
+
+
+
+select,
+.SumoSelect {
+  &.small,
+  &.medium,
+  &.large {
+    max-width: 100%;
+  }
+
+}
+
+
+
+
+textarea {
+  &.small {
+    height: 106px;
+  }
+
+  &.medium {
+    height: 213px;
+  }
+
+  &.large {
+    height: 319px;
+  }
+
+}
+
+
+
+
+.gform_wrapper {
+  margin-bottom: 24px;
+}
+
+
+
+
+.gform_heading {
+  margin-bottom: 44px;
+}
+
+
+
+
+.gform_title {
+  font-size: em(24px);
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+
+
+
+.gform_description {
+  display: block;
+}
+
+
+
+
+.gform_fields {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+
+  &.left_label,
+  &.right_label {
+    .gfield_label {
+      float: left;
+      margin-bottom: 0;
+      padding-right: $field-gap;
+      width: percentage(1/4);
+    }
+
+    .ginput_container {
+      float: left;
+      width: percentage(3/4);
+    }
+
+    .gfield_description {
+      clear: both;
+      margin-left: percentage(1/4);
+    }
+
+  }
+
+  &.right_label .gfield_label {
+    text-align: right;
+  }
+
+}
+
+
+
+
+.gfield {
+  @extend .clear;
+  clear: both;
+  margin-bottom: $field-spacing;
+
+  label {
+    display: block;
+  }
+
+  &.gfield_html:not(.gfield_html_formatted) {
+    margin-bottom: 0;
+  }
+
+}
+
+
+
+
+.gfield_label {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+
+
+
+.gfield_description {
+  font-size: em(11px);
+
+  .field_description_above & {
+    padding-bottom: 7px;
+  }
+
+  .field_description_below & {
+    padding-top: 7px;
+  }
+
+}
+
+
+
+
+.gform_footer {
+  margin-top: 30px;
+}
+
+
+
+
+.gform_footer .button,
+.gform_page_footer .button {
+  min-width: 103px;
+}
+
+
+
+
+.gfield_required {
+  color: $field-error;
+  display: inline-block;
+  margin-left: 3px;
+}
+
+
+
+
+.gf_clear,
+.clear-multi,
+.gf_clear_complex {
+  @extend .clear;
+}
+
+
+
+
+.clear-multi {
+  input {
+    padding-right: 5px;
+    text-align: center;
+    width: 70px;
+  }
+
+  .ginput_container {
+    float: left;
+
+    > label {
+      font-size: em(14px);
+      text-align: center;
+
+      .field_sublabel_above & {
+        margin-bottom: 7px;
+      }
+
+      .field_sublabel_below & {
+        margin-top: 7px;
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+.ginput_complex > span {
+  display: block;
+
+  > label {
+    .field_sublabel_above & {
+      margin-bottom: 7px;
+    }
+
+    .field_sublabel_below & {
+      margin-top: 7px;
+    }
+
+  }
+
+}
+
+
+
+
+.gform_ajax_spinner {
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Gravity Forms: Error CSS
+// ----------------------------------------------------------------------------
+.validation_error,
+.validation_message {
+  color: $field-error;
+  font-size: em(11px);
+}
+
+
+
+
+.gfield_error input,
+.gfield_error select,
+.gfield_error textarea,
+.gfield_error .SumoSelect > .SumoCaptionCont {
+  border-color: $field-error;
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Checkbox and Radio Fields
+// ----------------------------------------------------------------------------
+.gfield_checkbox,
+.gfield_radio {
+  list-style: none;
+  margin: -5px 0 0;
+  padding-left: 0;
+
+  li {
+    @extend .clear;
+    padding-bottom: 6px;
+  }
+
+  input,
+  label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+}
+
+
+
+
+.gfield_checkbox label {
+  padding-left: 2px;
+}
+
+
+
+
+.gfield_radio label {
+  padding-left: 6px;
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # HTML
+// ----------------------------------------------------------------------------
+.gfield_html {
+  font-size: em(16px);
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Section
+// ----------------------------------------------------------------------------
+.gsection {
+  border-bottom: 1px dotted #000;
+  margin-bottom: $field-spacing;
+}
+
+
+
+
+.gsection_title {
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Progress Bar
+// ----------------------------------------------------------------------------
+.gf_progressbar_wrapper,
+.gf_page_steps {
+  clear: both;
+  margin-bottom: $field-spacing;
+  width: 100%;
+}
+
+
+
+
+.gf_progressbar_title {
+  margin: 0 0 10px;
+}
+
+
+
+
+.gf_progressbar:after {
+  background: #ebebeb;
+  border-radius: $field-radius;
+  border: 1px solid #ccc;
+  content: '';
+  display: block;
+  height: 49px;
+  margin-top: -49px;
+  width: 100%;
+}
+
+
+
+
+.gf_progressbar_percentage {
+  @include font-smoothing; // Better Font Rendering
+  border-radius: $field-radius 0 0 $field-radius;
+  color: #fff;
+  font-family: helvetica, arial, sans-serif;
+  font-size: em(13px);
+  height: 49px;
+  position: relative;
+  text-align: right;
+  vertical-align: middle;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  span {
+    display: inline-block;
+    line-height: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+    word-wrap: normal;
+  }
+
+  &.percentbar_blue {
+    background: #036493;
+  }
+
+  &.percentbar_gray {
+    background: #7c7c7c;
+  }
+
+  &.percentbar_green {
+    background: #88b831;
+  }
+
+  &.percentbar_orange {
+    background: #ff7120;
+  }
+
+  &.percentbar_red {
+    background: #ff2a1a;
+  }
+
+  &.percentbar_0 {
+    background: none;
+    color: #000;
+    display: inline-block;
+    width: auto !important; // Overwrite inline css
+  }
+
+  &.percentbar_100 {
+    border-radius: $field-radius;
+  }
+
+}
+
+
+
+
+.gf_step {
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 20px;
+  opacity: .2;
+  vertical-align: top;
+
+  &.gf_step_last {
+    margin-right: 0;
+  }
+
+  &.gf_step_active {
+    opacity: 1;
+  }
+
+}
+
+
+
+
+.gf_step_number:after {
+  content: ':';
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Name Field
+// ----------------------------------------------------------------------------
+.ginput_container_name {
+  @extend .clear;
+
+  span {
+    display: block;
+  }
+
+  .name_prefix,
+  .name_first,
+  .name_middle,
+  .name_last,
+  .name_suffix {
+    float: left;
+    width: 100%;
+  }
+
+  .name_first input,
+  .name_middle input,
+  .name_last input,
+  .name_suffix input {
+    width: 100%;
+  }
+
+  .name_prefix {
+    margin-bottom: 6px;
+
+    select,
+    .SumoSelect {
+      width: 100%;
+    }
+
+  }
+
+  .name_suffix {
+    margin-top: 6px;
+  }
+
+  &.has_first_name.no_middle_name.has_last_name,
+  &.has_first_name.has_middle_name.no_last_name,
+  &.no_first_name.has_middle_name.has_last_name {
+    .name_first,
+    .name_middle,
+    .name_last {
+      width: percentage(1/2);
+    }
+
+    .name_first {
+      padding-right: $field-gap;
+    }
+
+    .name_middle {
+      padding-left: $field-gap;
+
+      &:first-child {
+        padding-left: 0;
+        padding-right: $field-gap;
+      }
+
+    }
+
+    .name_last {
+      padding-left: $field-gap;
+    }
+
+  }
+
+  &.has_first_name.has_middle_name.has_last_name {
+    .name_first,
+    .name_middle,
+    .name_last {
+      width: percentage(1/3);
+    }
+
+    .name_first {
+      padding-right: $field-gap;
+    }
+
+    .name_middle {
+      padding-left: $field-gap;
+      padding-right: $field-gap;
+    }
+
+    .name_last {
+      padding-left: $field-gap;
+    }
+
+  }
+
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Date Field
+// ----------------------------------------------------------------------------
+.ginput_container_date {
+  position: relative;
+
+  input.datepicker_with_icon {
+    padding-left: 37px;
+  }
+
+  .ui-datepicker-trigger {
+    cursor: pointer;
+    left: 10px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+  }
+
+  .gform_fields.left_label & .ginput_container,
+  .gform_fields.right_label & .ginput_container {
+    width: auto;
+  }
+
+  .gfield_date_month,
+  .gfield_date_day,
+  .gfield_date_dropdown_month,
+  .gfield_date_dropdown_day {
+    margin-right: $field-gap;
+  }
+
+  .gfield_date_year input {
+    text-align: center;
+    width: 100px;
+  }
+
+  .gfield_date_dropdown_month,
+  .gfield_date_dropdown_day,
+  .gfield_date_dropdown_year {
+    select,
+    .SumoSelect {
+      width: 130px;
+    }
+  }
+
+}
+
+
+
+
+.ui-datepicker {
+  background: #fff;
+  border-radius: $field-radius;
+  border: 1px solid #dcdcdc;
+  color: #000;
+  display: none;
+  font-size: em(14px);
+  margin-top: 10px;
+  padding: 5px 5px 0;
+  width: 250px;
+
+  table {
+    margin-bottom: 5px;
+  }
+
+  tr {
+    border: 1px solid #dcdcdc;
+  }
+
+  th,
+  td {
+    border-left: 1px solid #dcdcdc;
+
+    &:first-child {
+      border-left: 0;
+    }
+
+  }
+
+  th {
+    padding: 5px;
+  }
+
+  td a {
+    display: block;
+    padding: 5px;
+    text-align: center;
+  }
+
+  tbody {
+    text-align: right;
+  }
+
+  .ui-datepicker-header {
+    margin-bottom: 5px;
+  }
+
+  .ui-datepicker-prev,
+  .ui-datepicker-next {
+    cursor: pointer;
+    display: inline-block;
+    font-size: em(14px);
+    font-weight: 700;
+    text-transform: uppercase;
+    vertical-align: top;
+  }
+
+  .ui-datepicker-next,
+  .ui-datepicker-next-hover {
+    float: right;
+  }
+
+  .ui-datepicker-title {
+    text-align: center;
+
+    select {
+      margin: 0;
+    }
+
+    .ui-datepicker-month,
+    .ui-datepicker-year {
+      border: 0;
+      color: #000;
+      cursor: pointer;
+      display: inline-block;
+      font-size: em(16px);
+      font-weight: 700;
+      padding: 0;
+      vertical-align: top;
+
+      &:focus,
+      &:hover {
+        color: #ea596a;
+      }
+
+    }
+
+    .ui-datepicker-month {
+      margin-right: 2.5px;
+      text-transform: uppercase;
+    }
+
+    .ui-datepicker-year {
+      margin-left: 2.5px;
+    }
+
+  }
+
+  .ui-state-highlight {
+    color: #ea596a;
+  }
+
+  .ui-state-active {
+    background: #ea596a;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Time Field
+// ----------------------------------------------------------------------------
+.ginput_container_time {
+  float: left;
+
+  &.gfield_time_hour {
+    padding-right: 10px;
+    position: relative;
+
+    i {
+      display: block;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 42px;
+      position: absolute;
+      right: 2px;
+      top: 4px;
+
+      .field_sublabel_above & {
+        bottom: 4px;
+        top: auto;
+      }
+
+    }
+
+  }
+
+  &.gfield_time_minute {
+    margin-right: 10px;
+  }
+
+  &.gfield_time_ampm select,
+  &.gfield_time_ampm .SumoSelect {
+    width: 100px;
+  }
+
+  .gform_fields.left_label &,
+  .gform_fields.right_label & {
+    width: auto;
+  }
+
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Address Field
+// ----------------------------------------------------------------------------
+.address_line_2,
+.address_city,
+.address_state,
+.address_zip,
+.address_country {
+  margin-top: $field-spacing;
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # File Upload Field
+// ----------------------------------------------------------------------------
+.gform_fileupload_multifile {
+  border: 1px dashed $field-border_color;
+  padding: 24px;
+  text-align: center;
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # List Field
+// ----------------------------------------------------------------------------
+.gfield_list {
+  margin-bottom: 0;
+  width: 100%;
+
+  th {
+    font-size: em(14px);
+    font-weight: 400;
+  }
+
+  th + th,
+  td + td {
+    padding-left: 10px;
+  }
+
+  td.gfield_list_cell {
+    padding-top: 10px;
+
+    input {
+      width: 100%;
+    }
+
+  }
+
+  .gfield_list_icons {
+    padding-right: 10px;
+
+    img {
+      vertical-align: middle;
+    }
+
+  }
+
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Product Field
+// ----------------------------------------------------------------------------
+.ginput_product_price_label,
+.ginput_quantity_label {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+
+
+.ginput_product_price {
+  margin-right: 10px;
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Credit Card Field
+// ----------------------------------------------------------------------------
+.gfield_creditcard_warning_message {
+  margin-bottom: 10px;
+
+  span {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSItMTA2NyAyODY1IDI0IDMyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IC0xMDY3IDI4NjUgMjQgMzI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiM3OTAwMDA7fQ0KPC9zdHlsZT4NCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0tMTA1MywyODY1Yy01LjUsMC0xMCw0LjUtMTAsMTBoNGMwLTMuMywyLjctNiw2LTZjMy4zLDAsNiwyLjcsNiw2djJoLTIwdjE0YzAsMy4zLDIuNyw2LDYsNmgxMg0KCWMzLjMsMCw2LTIuNyw2LTZ2LTE2Qy0xMDQzLDI4NjkuNS0xMDQ3LjUsMjg2NS0xMDUzLDI4NjV6IE0tMTA0OSwyODkzaC0xMmMtMS4xLDAtMi0wLjktMi0ydi0xMGgxNnYxMA0KCUMtMTA0NywyODkyLjEtMTA0Ny45LDI4OTMtMTA0OSwyODkzeiBNLTEwNTMsMjg4N2MwLDEuMS0wLjksMi0yLDJzLTItMC45LTItMmMwLTEuMSwwLjktMiwyLTJTLTEwNTMsMjg4NS45LTEwNTMsMjg4N3oiLz4NCjwvc3ZnPg0K);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 1em auto;
+    color: $field-error;
+    display: block;
+    padding-left: 20px;
+  }
+
+}
+
+
+
+
+.ginput_container_creditcard .ginput_full {
+  margin-top: 24px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+}
+
+
+
+
+.ginput_cardextras,
+.ginput_card_expiration_container {
+  @extend .clear;
+}
+
+
+
+
+.ginput_cardextras {
+  label {
+    clear: both;
+  }
+
+  .ginput_card_security_code {
+    padding-left: 52px;
+  }
+
+}
+
+
+
+
+.ginput_cardinfo_left {
+  float: left;
+  width: 66.1780%;
+
+  .ginput_card_expiration,
+  .SumoSelect {
+    float: right;
+    margin-bottom: 7px;
+    width: 49.3450% !important;
+
+    &:first-child {
+      float: left;
+    }
+
+  }
+
+}
+
+
+
+
+.ginput_cardinfo_right {
+  float: right;
+  position: relative;
+  width: 32.8450%;
+
+  label {
+    margin-top: 7px;
+  }
+
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Credit Card Icons
+// ----------------------------------------------------------------------------
+.ginput_card_security_code_icon {
+  background-image: image-url('gf-creditcard-icons.png');
+  background-position: 0 -128px;
+  background-repeat: no-repeat;
+  display: block;
+  height: 23px;
+  left: 11px;
+  position: absolute;
+  top: 12px;
+  width: 32px;
+}
+
+
+
+
+.gform_card_icon_container {
+  @extend .clear;
+  margin-bottom: 7px;
+}
+
+
+
+
+.gform_card_icon {
+  background-image: image-url('gf-creditcard-icons.png');
+  background-repeat: no-repeat;
+  float: left;
+  height: 32px;
+  margin-right: 4px;
+  text-indent: -9000px;
+  width: 36px;
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Credit Card Icons: Style 1
+// ----------------------------------------------------------------------------
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_visa {
+  background-position: 0 0;
+}
+
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_selected.gform_card_icon_visa {
+  background-position: 0 -32px;
+}
+
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_inactive.gform_card_icon_visa {
+  background-position: 0 -64px;
+}
+
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_mastercard {
+  background-position: -36px 0;
+}
+
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_selected.gform_card_icon_mastercard {
+  background-position: -36px -32px;
+}
+
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_inactive.gform_card_icon_mastercard {
+  background-position: -36px -64px;
+}
+
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_amex {
+  background-position: -72px 0;
+}
+
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_selected.gform_card_icon_amex {
+  background-position: -72px -32px;
+}
+
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_inactive.gform_card_icon_amex {
+  background-position: -72px -64px;
+}
+
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_discover {
+  background-position: -108px 0;
+}
+
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_selected.gform_card_icon_discover {
+  background-position: -108px -32px;
+}
+
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_inactive.gform_card_icon_discover {
+  background-position: -108px -64px;
+}
+
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_maestro {
+  background-position: -144px 0;
+}
+
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_selected.gform_card_icon_maestro {
+  background-position: -144px -32px;
+}
+
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_inactive.gform_card_icon_maestro {
+  background-position: -144px -64px;
+}
+
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_jcb {
+  background-position: -180px 0;
+}
+
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_selected.gform_card_icon_jcb {
+  background-position: -180px -32px;
+}
+
+.gform_card_icon_style1 .gform_card_icon.gform_card_icon_inactive.gform_card_icon_jcb {
+  background-position: -180px -64px;
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Credit Card Icons: Style 2
+// ----------------------------------------------------------------------------
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_visa {
+  background-position: 0 -192px;
+}
+
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_selected.gform_card_icon_visa {
+  background-position: 0 -224px;
+}
+
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_inactive.gform_card_icon_visa {
+  background-position: 0 -256px;
+}
+
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_mastercard {
+  background-position: -36px -192px;
+}
+
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_selected.gform_card_icon_mastercard {
+  background-position: -36px -224px;
+}
+
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_inactive.gform_card_icon_mastercard {
+  background-position: -36px -256px;
+}
+
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_amex {
+  background-position: -72px -192px;
+}
+
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_selected.gform_card_icon_amex {
+  background-position: -72px -224px;
+}
+
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_inactive.gform_card_icon_amex {
+  background-position: -72px -256px;
+}
+
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_discover {
+  background-position: -108px -192px;
+}
+
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_selected.gform_card_icon_discover {
+  background-position: -108px -224px;
+}
+
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_inactive.gform_card_icon_discover {
+  background-position: -108px -256px;
+}
+
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_maestro {
+  background-position: -144px -192px;
+}
+
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_selected.gform_card_icon_maestro {
+  background-position: -144px -224px;
+}
+
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_inactive.gform_card_icon_maestro {
+  background-position: -144px -256px;
+}
+
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_jcb {
+  background-position: -180px -192px;
+}
+
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_selected.gform_card_icon_jcb {
+  background-position: -180px -224px;
+}
+
+.gform_card_icon_style2 .gform_card_icon.gform_card_icon_inactive.gform_card_icon_jcb {
+  background-position: -180px -256px;
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// # Gravity Forms: CSS Ready Classes
+// ----------------------------------------------------------------------------
+.gf_left_half,
+.gf_right_half,
+.gf_left_third,
+.gf_middle_third,
+.gf_right_third,
+.ginput_full,
+.ginput_left,
+.ginput_right {
+  input,
+  select,
+  .SumoSelect {
+    width: 100%;
+  }
+
+}
+
+
+
+
+.gf_left_half,
+.gf_right_half,
+.ginput_left,
+.ginput_right {
+  display: block;
+  float: left;
+  width: 50%;
+}
+
+
+
+
+.gf_left_half,
+.ginput_left {
+  clear: left;
+  padding-right: $field-gap;
+}
+
+
+
+
+.gf_right_half,
+.ginput_right {
+  clear: right;
+  padding-left: $field-gap;
+}
+
+
+
+
+.gf_left_third,
+.gf_middle_third,
+.gf_right_third {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.3333%;
+}
+
+
+
+
+.gf_inline {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+
+  input.large,
+  input.meduim,
+  input.small,
+  select,
+  textarea {
+    width: 100%;
+  }
+
+}
+
+
+
+
+li.gf_list_2col,
+li.gf_list_3col,
+li.gf_list_4col,
+li.gf_list_5col {
+  .gfield_checkbox li,
+  .gfield_radio li {
+    display: inline-block;
+    padding-right: 12px;
+    vertical-align: middle;
+  }
+
+  .gfield_checkbox label,
+  .gfield_radio label {
+    max-width: 80%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+}
+
+
+
+
+li.gf_list_2col .gfield_checkbox li,
+li.gf_list_2col .gfield_radio li {
+  width: 50%;
+}
+
+
+
+
+li.gf_list_3col .gfield_checkbox li,
+li.gf_list_3col .gfield_radio li {
+  width: 33.3%;
+}
+
+
+
+
+li.gf_list_4col .gfield_checkbox li,
+li.gf_list_4col .gfield_radio li {
+  width: 25%;
+}
+
+
+
+
+li.gf_list_5col .gfield_checkbox li,
+li.gf_list_5col .gfield_radio li {
+  width: 20%;
+}
+
+
+
+
+li.gf_list_inline {
+  margin-bottom: 12px;
+
+  .gfield_checkbox li,
+  .gfield_radio li {
+    display: inline-block;
+    float: none !important;
+    margin: 0 12px 12px 0;
+    padding-top: 0;
+    width: auto !important;
+  }
+}
