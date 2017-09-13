@@ -1391,35 +1391,4 @@ li.gf_list_inline {
 
 
 
-.site-footer {
-  #field_1_1 {
-    width: 285px;
 
-    label {
-      display: none;
-    }
-  }
-  .footer-button {
-    background: #d0a48b;
-    border: none;
-    padding: 25px 30px;
-    position: relative;
-    font-size: em(15px);
-    font-weight: 700;
-    letter-spacing: em(2px);
-    text-align: left;
-
-    &:before {
-      content: "\f178";
-      display: block;
-      font-family: 'icomoon' !important;
-      font-size: em(21px);
-      font-weight: normal;
-      position: absolute;
-      right: 30px;
-      top: 20px;
-      z-index: 50;
-    }
-  }
-  
-}
