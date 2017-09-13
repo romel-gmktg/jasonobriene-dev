@@ -27,7 +27,16 @@
 
       <div class="page-row">
         <div class="site-name">
-          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php
+              $logo = get_bloginfo( 'name');
+
+              $words    = explode( ' ', $logo );
+              $words[0] = '<span class="logo-normal">' . $words[0] . '</span>';
+              $title    = implode( ' ', $words );
+              echo $title;
+              ?>
+                
+              </a>
         </div>
         <nav id="site-navigation" class="primary-navigation base-navigation">
           <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'gmktg' ); ?></button>
