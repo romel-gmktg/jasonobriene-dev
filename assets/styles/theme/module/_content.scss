@@ -92,17 +92,20 @@
 }
 
 #testimonials {
-  
+
 }
 
 #image-address {
   color: #fff;
+  height: 720px;
 
   h2 {
     text-transform: none;
-    font-size: 42px;
+    font-size: 2.6em;
     font-weight: 900;
     max-width: 50%;
+    margin-bottom: 2em;
+    line-height: normal;
   }
 
   p {
