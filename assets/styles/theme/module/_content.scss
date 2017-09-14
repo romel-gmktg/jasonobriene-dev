@@ -77,6 +77,25 @@
   margin-right: 10px;
 }
 
+/* Homepage Banner */
+#block-hero {
+      height: calc(100vh - 140px);
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+  }
+  .content-hero {
+    display: inline-block;
+    vertical-align: middle;
+    width: 500px;
+  }
+
+}
+
 /* About Page */
 
 .about-content {
