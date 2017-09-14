@@ -79,7 +79,7 @@
 
 /* Homepage Banner */
 #block-hero {
-      height: calc(100vh - 140px);
+      height: calc(100vh - 90px);
 
   &:before {
     content: '';
@@ -91,7 +91,7 @@
   .content-hero {
     display: inline-block;
     vertical-align: middle;
-    width: 500px;
+    width: 550px;
   }
 
 }
@@ -257,3 +257,17 @@
     display: none;
   }
 }
+
+
+/* Blog Page */
+
+.about-hero {
+  text-align: center;
+
+  #blog-header {
+    font-family: 'Avenir', sans-serif;
+    font-size: em(39px);
+    font-weight: 700;
+  }
+}
+
