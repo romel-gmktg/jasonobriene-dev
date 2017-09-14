@@ -31,20 +31,11 @@ It has a different colored navigation and 50 - 50 width header.
 
   <div id="page" class="site">
     <?php get_field( 'about_hero_image'); ?>
-    <header id="about-header" class="site-header" style="background-image: url('<?php the_field( 'about_hero_image' ); ?>');">
-        <div class="page-row">
-          <div class="header-navigation">
+    <header id="masthead" class="site-header" >
+        <div id="about-header" style="background-image: url('<?php the_field( 'hero_image' ); ?>');">
+          <div class="page-row">
             <div class="site-name">
-              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php
-                  $logo = get_bloginfo( 'name');
-
-                  $words    = explode( ' ', $logo );
-                  $words[0] = '<span class="logo-normal">' . $words[0] . '</span>';
-                  $title    = implode( ' ', $words );
-                  echo $title;
-                  ?>
-
-                  </a>
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
             </div>
             <nav id="site-navigation" class="primary-navigation base-navigation">
               <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'gmktg' ); ?></button>
@@ -56,13 +47,14 @@ It has a different colored navigation and 50 - 50 width header.
               ?>
               <?php echo do_shortcode('[gmktg_social_links]'); ?>
             </nav>
-          </div>
-          <div class="about-content">
-            <h1><?php the_field( 'about_name' ); ?></h1>
-            <p><?php the_field( 'about_description' ); ?></p>
-            <p><?php the_field( 'about_email' ); ?></p>
-          </div>
-        </div><!-- .page-row -->
+
+            <div class="about-content">
+              <h1><?php the_field( 'about_name' ); ?></h1>
+              <p><?php the_field( 'about_description' ); ?></p>
+              <p><?php the_field( 'about_email' ); ?></p>
+            </div>
+          </div><!-- .page-row -->
+        </div>
     </header><!-- #masthead -->
 
     <div id="content" class="site-content">
