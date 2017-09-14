@@ -1,0 +1,129 @@
+
+
+/* Contact Page */
+
+#contact-hero-text {
+  width: 20%;
+  margin: 0 0 0 7%;
+  line-height: 1.2em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#contact-info {
+  background: url('http://localhost/JasonObeirne/wp-content/uploads/2017/09/Contact-BG.png') top right #fff no-repeat;
+  padding-bottom: 140px;
+  padding-top: 140px;
+  font-size: 1.5em;
+
+  h2 {
+    text-transform: none;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 12.5px;
+    color: #d0a48b;
+  }
+
+  p {
+    color: rgba( 81, 81, 81, 0.6 );
+  }
+
+  #gform_3 {
+    margin-top: 150px;
+    position: relative;
+
+    #field_3_1, #field_3_2, #field_3_4 {
+      width: 31.1%;
+      margin-right: 35px;
+    }
+
+    #field_3_4 {
+      margin-right: 0px;
+    }
+
+    #field_3_3 {
+      width: 75%;
+    }
+
+    input, textarea {
+      border: 2px solid #eeebe6;
+      font-size: 16px;
+
+      &::placeholder {
+        color: #aeaeae;
+        font-weight: 500;
+      }
+    }
+
+    input[type="submit"] {
+      background-color: #d0a48b;
+      border: 0px;
+      position: absolute;
+      bottom: 11px;
+      right: 0;
+      padding: 30px 140px 30px 30px;
+      font-size: 12.5px;
+      font-weight: 700;
+
+      &:after {
+        content: "123";
+        background: url('http://localhost/JasonObeirne/wp-content/uploads/2017/09/arrow-right.png');
+        position: absolute;
+        height: 8px;
+        width: 17px;
+      }
+    }
+  }
+
+}
+
+#newsletter {
+  background: #515151;
+  color: #fff;
+  text-align: center;
+  padding-top: 140px;
+  padding-bottom: 140px;
+
+  h2 {
+    color: #c8bdab;
+    font-weight: normal;
+    margin-bottom: 70px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .gfield_label, .ginput_container_email {
+    font-size: 2.6em;
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  .gform_body {
+    display: inline-block;
+
+    .ginput_container_email {
+      width: 56%;
+    }
+  }
+
+  input[type="email"] {
+    background: transparent;
+    border: 0px;
+    border-bottom: 3px solid #fff;
+    padding: 0px;
+    color: #fff;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+
+  input[type=submit] {
+    display: none;
+  }
+}

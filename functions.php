@@ -165,6 +165,16 @@ function gmktg_scripts() {
   wp_enqueue_style( 'gmktg-vendor-css', get_template_directory_uri() . '/assets/styles/vendor.css' );
   wp_enqueue_style( 'gmktg-theme-css', get_template_directory_uri() . '/assets/styles/theme.css' );
 
+  if ( is_page_template( 'about.php' ) ) {
+    wp_enqueue_style( 'gmktg-about-css', get_template_directory_uri() . '/assets/styles/theme/template/_about.scss' );
+  }
+  if ( is_page_template( 'blog.php' ) ) {
+    wp_enqueue_style( 'gmktg-about-css', get_template_directory_uri() . '/assets/styles/theme/template/_blog.scss' );
+  }
+  if ( is_page_template( 'contact.php' ) ) {
+     wp_enqueue_style( 'gmktg-about-css', get_template_directory_uri() . '/assets/styles/theme/template/_contact.scss' );
+  }
+
   // Scripts
   wp_enqueue_script( 'gmktg-vendor-js', get_template_directory_uri() . '/assets/scripts/vendor-dist.js', array( 'jquery' ), false, true );
   wp_enqueue_script( 'gmktg-theme-js', get_template_directory_uri() . '/assets/scripts/theme-dist.js', array( 'jquery' ), false, true );
