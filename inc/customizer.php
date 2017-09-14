@@ -179,3 +179,54 @@ GMKTG_Kirki::add_field( 'gmktg_config', array(
     'height'   => 250,
   ),
 ) );
+
+
+/**
+ * Blog: Hero
+ */
+GMKTG_Kirki::add_section( 'blog_hero', array(
+  'title'       => 'Blog: Hero',
+  'description' => __( 'Contents', 'gmktg' ),
+  'priority'    => 160,
+  'capability'  => 'edit_theme_options',
+) );
+
+/**
+ * Control: Hero Heading
+ */
+GMKTG_Kirki::add_field( 'gmktg_config', array(
+  'type'     => 'text',
+  'settings' => 'blog_hero_text',
+  'label'    => 'Hero Heading',
+  'section'  => 'blog_hero',
+) );
+
+/**
+ * Control: Hero Background
+ */
+GMKTG_Kirki::add_field( 'gmktg_config', array(
+  'type'     => 'image',
+  'settings' => 'blog_hero_bg',
+  'label'    => 'Hero Background',
+  'section'  => 'blog_hero',
+) );
+
+/**
+ * Control: Button Text
+ */
+GMKTG_Kirki::add_field( 'gmktg_config', array(
+  'type'     => 'text',
+  'settings' => 'blog_button_text',
+  'label'    => 'Button Text',
+  'section'  => 'blog_hero',
+) );
+
+/**
+ * Control: Button Link
+ */
+GMKTG_Kirki::add_field( 'gmktg_config', array(
+  'type'     => 'text',
+  'settings' => 'blog_button_link',
+  'label'    => 'Button Link',
+  'section'  => 'blog_hero',
+) );

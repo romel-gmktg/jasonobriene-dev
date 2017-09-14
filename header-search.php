@@ -23,7 +23,7 @@
 
   <div id="page" class="site">
     <?php get_field( 'hero_image'); ?>
-    <header id="masthead" class="site-header" style="background-image: url('<?php the_field( 'hero_image' ); ?>');">
+    <header id="masthead" class="site-header" style="background-image: url('<?php echo get_theme_mod( 'blog_hero_bg', '' ); ?>');">
 
       <div class="page-row">
         <div class="site-name">
@@ -54,8 +54,8 @@
       </div><!-- .page-row -->
       <div class="page-row blog-hero" id="block-hero">
         <div class="content-hero">
-            <h1 class="blog-header"><?php the_field( 'hero_text' ); ?></h1>
-            <button class="arrow-button" href="<?php esc_url(the_field( 'button_link' )); ?>"><?php the_field( 'button_text' ); ?></button>
+            <h1 class="blog-header"><?php echo get_theme_mod( 'blog_hero_text', '' ); ?></h1>
+            <button class="arrow-button" href="<?php echo get_theme_mod( 'blog_button_link', '' ); ?>"><?php echo get_theme_mod( 'blog_button_text', '' ); ?></button>
         </div>
       </div>
 

@@ -7,14 +7,33 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <header class="page-header">
-    <?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
-  </header>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+<?php
 
-  <div class="page-content clear">
-    <?php the_content(); ?>
+$args = array(
+    'post_type'      => 'post',
+    'posts_per_page' => 4,
+    'order'          => 'ASC',
+    'cat'            => get_query_var('cat')
+ );
 
-    <?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gmktg' ), 'after' => '</div>' ) ); ?>
-  </div>
+
+$parent = new WP_Query( $args );
+
+
+if ( $parent->have_posts() ) : ?>
+
+    <?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
+
+        <div id="parent-<?php the_ID(); ?>" class="blog-entry">
+        	<?php the_post_thumbnail() ?>
+            <h2 class="blog-heading"><?php the_title(); ?></h2>
+            <a class="arrow-button blog-link" href="<?php the_permalink(); ?>">Read More</a>
+        </div>
+
+    <?php endwhile; ?>
+
+<?php endif; wp_reset_query(); ?>
+
+
 </article>

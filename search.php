@@ -1,9 +1,11 @@
-<?php /* Template Name: Blog */ ?>
+<?php /**
+* A Simple Category Template
+*/ ?>
 
 
 <?php 
 
-get_header('blog');
+get_header('search');
 
 get_template_part( 'partials/content-blog', 'page' );
 
