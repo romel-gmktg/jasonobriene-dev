@@ -2,7 +2,7 @@
   "metadata": {
     "name": "icomoon",
     "lastOpened": 0,
-    "created": 1505286845737
+    "created": 1505375709660
   },
   "iconSets": [
     {
@@ -40,7 +40,10 @@
         {
           "name": "search",
           "id": 6,
-          "order": 0
+          "order": 23,
+          "prevSize": 28,
+          "code": 61442,
+          "tempChar": ""
         },
         {
           "name": "envelope-o",
@@ -1708,7 +1711,7 @@
           "order": 22,
           "prevSize": 28,
           "code": 61816,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "apple",
@@ -13644,7 +13647,7 @@
           "prevSize": 16,
           "code": 59648,
           "name": "facebook",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 17,
@@ -13652,7 +13655,7 @@
           "prevSize": 16,
           "code": 59649,
           "name": "twitter",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 8,
@@ -13660,7 +13663,7 @@
           "prevSize": 16,
           "code": 59650,
           "name": "google-plus",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 9,
@@ -13668,7 +13671,7 @@
           "prevSize": 16,
           "code": 59651,
           "name": "instagram",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 15,
@@ -13676,7 +13679,7 @@
           "name": "rss",
           "prevSize": 16,
           "code": 59653,
-          "tempChar": ""
+          "tempChar": ""
         }
       ],
       "id": 0,

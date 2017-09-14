@@ -60,7 +60,12 @@
       </div>
 
     </header><!-- #masthead -->
-
+    <div class="page-row block-widget">
+      <div class="container-widget">
+       <?php if ( ! dynamic_sidebar( 'blog' )) : ?>
+       <?php endif; ?>
+      </div>
+    </div>
     <div id="content" class="site-content">
 
       <div class="page-row">
