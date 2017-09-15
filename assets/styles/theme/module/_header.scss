@@ -16,10 +16,12 @@
 .site-name {
   display: inline-block;
   float: left;
-  vertical-align: top;
-  padding: 10px 20px;
+  letter-spacing: 2px;
+  padding: 10px 13px;
   border: 3px solid #fff;
-  font-weight: 900;
+  font-weight: 700;
+  font-size: 16px;
+  vertical-align: top;
 
   .logo-normal {
     font-weight: normal;
@@ -29,6 +31,10 @@
 
 .site-header {
   padding: 40px 0 0;
+
+  .page-row {
+    padding: 0 15px ;
+  }
 }
 
 

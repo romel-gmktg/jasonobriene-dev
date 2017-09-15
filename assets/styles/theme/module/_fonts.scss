@@ -62,7 +62,6 @@
 }
 
 
-
 .font-icon {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -78,6 +77,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-search:before {
+  content: "\f002";
+}
 .icon-long-arrow-right:before {
   content: "\f178";
 }

@@ -110,8 +110,33 @@ function gmktg_widgets_init() {
     'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>'
   ) );
+    register_sidebar( array(
+    'name'          => esc_html__( 'Blog Widgets', 'gmktg' ),
+    'id'            => 'blog',
+    'before_widget' => '<section id="%1$s" class="widget blog-widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3 class="widget-title">',
+    'after_title'   => '</h3>'
+  ) );
 }
 add_action( 'widgets_init', 'gmktg_widgets_init' );
+
+/**
+ * Modifying Wordpress Category Widget
+ *
+ */
+
+
+
+
+function ChangeSelectTitle($cat_args){
+$cat_args['show_option_none'] = __('CATEGORIES');
+return $cat_args;
+}
+add_filter('widget_categories_dropdown_args', 'ChangeSelectTitle');
+
+
+
 
 /**
  * Deregister wordpress widgets.

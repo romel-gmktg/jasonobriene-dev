@@ -16,3 +16,67 @@
   display: inline-block;
   vertical-align: top;
 }
+.widget-container {
+	border-bottom: 1px solid rgba(10,10,10,.10);
+}
+.block-widget {
+	
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: em(2px);
+	text-transform: uppercase;
+	padding: 27px 0 17px 0;
+	max-width: 1180px;
+
+	section {
+		margin-bottom: 0;
+	}
+	.widget-category {
+		float: left;
+		.SumoSelect>.CaptionCont {
+		    border: none;
+		}
+		.SumoSelect.open>.optWrapper {
+			font-size: 10px;
+		}
+		.SelectBox {
+			padding: 0;
+		}
+		.widget-title, select {
+			display: none;
+		}
+
+	}
+	.widget-search {
+		float: right;
+
+		.search-field {
+			border: none;
+			max-width: 110px;
+			padding: 0;
+			padding-right: 15px;
+			text-transform: uppercase;
+			letter-spacing: em(2px);
+			position: relative;
+		}
+		.search-form {
+
+				label {
+					position: relative;
+
+					&:before {
+				    content: "\f002";
+				    display: block;
+				    font-family: 'icomoon'!important;
+				    font-size: 1.3125em;
+				    font-weight: normal;
+				    position: absolute;
+				    right: 0;
+				    top: -7px;
+				    z-index: 50;
+				}
+
+			}
+		}
+	}
+}
