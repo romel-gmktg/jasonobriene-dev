@@ -31,9 +31,15 @@ It has a different colored navigation and 50 - 50 width header.
 
   <div id="page" class="site">
     <?php get_field( 'about_hero_image'); ?>
+<<<<<<< HEAD
     <header id="about-header" class="site-header" style="background-image: url('<?php the_field( 'about_hero_image' ); ?>');">
         <div class="page-row">
           <div class="header-navigation">
+=======
+    <header id="masthead" class="site-header" >
+        <div id="about-header" style="background-image: url('<?php the_field( 'hero_image' ); ?>');">
+          <div class="page-row">
+>>>>>>> 13ecbae8b38c9ab1ccf6a6e77fd410c8971ca0d0
             <div class="site-name">
               <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php
                   $logo = get_bloginfo( 'name');
