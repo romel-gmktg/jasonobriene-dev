@@ -7,7 +7,59 @@
 #team-members {
 
   .members {
-    background-size: cover;
+
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 8px;
+    min-width: 250px;
+    max-width: 370px;
+    width: 100%;
+    color: #ffffff;
+    text-align: left;
+    font-size: 14px;
+
+    * {
+      -webkit-transition: all 0.35s;
+      transition: all 0.35s;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    img {
+      max-width: 100%;
+      vertical-align: top;
+    }
+
+    .text-container {
+      position: absolute;
+      height: 75px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      overflow: hidden;
+      padding: 15px;
+    }
+
+    h4 {
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 22px;
+      margin: 3px 0 40px;
+    }
+
+    blockquote {
+      padding: 0;
+      margin: 0;
+      font-size: 1em;
+    }
+
+  }
+
+  .members:hover .text-container,
+  .members.hover .text-container {
+    height: calc(75%);
+    background-color: #d0a48b;
   }
 
 }

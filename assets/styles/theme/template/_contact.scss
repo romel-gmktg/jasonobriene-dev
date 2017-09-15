@@ -36,8 +36,8 @@
     position: relative;
 
     #field_3_1, #field_3_2, #field_3_4 {
-      width: 31.1%;
-      margin-right: 35px;
+      width: 30.9%;
+      margin-right: 36px;
     }
 
     #field_3_4 {
@@ -68,12 +68,16 @@
       font-size: 12.5px;
       font-weight: 700;
 
-      &:after {
-        content: "123";
-        background: url('http://localhost/JasonObeirne/wp-content/uploads/2017/09/arrow-right.png');
+      &:before {
+        content: "\f178";
+        display: block;
+        font-family: 'icomoon' !important;
+        font-size: em(21px);
+        font-weight: normal;
         position: absolute;
-        height: 8px;
-        width: 17px;
+        right: 30px;
+        top: 22px;
+        z-index: 50;
       }
     }
   }
